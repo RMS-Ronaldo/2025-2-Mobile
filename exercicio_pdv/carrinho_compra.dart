@@ -1,7 +1,7 @@
 import 'item_compra.dart';
 
 class CarrinhoCompra{
-    Lista<ItemCompra> itens = [];
+    List<ItemCompra> itens = [];
 
     void adicionarItem(ItemCompra item){
         itens.add(item);
@@ -10,7 +10,7 @@ class CarrinhoCompra{
     double calcularTotal(){
         double total = 0;
         for(var item in itens){
-            total += item.calcularSubtotal();
+            total += item.calcularSubTotal();
         }
         return total;
     }
@@ -27,10 +27,11 @@ class CarrinhoCompra{
         return calcularTotal() - calcularDesconto();
     }
 
-    boll estaVazio(){
+    bool estaVazio(){
         return itens.isEmpty;
     }
 
     int quantidadeItens(){
         return itens.length;
     }
+}

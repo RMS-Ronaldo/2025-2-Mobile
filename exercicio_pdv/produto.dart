@@ -1,5 +1,5 @@
 class Produto{
-    string nome;
+    String nome;
     double valorUnitario;
 
     Produto(this.nome, this.valorUnitario);
